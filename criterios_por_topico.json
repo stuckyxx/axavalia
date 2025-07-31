@@ -1,0 +1,569 @@
+{
+    "Prefeitura": {
+      "INFORMAÇÕES PRIORITÁRIAS": [
+        {
+          "topico": "1.1", "criterio": "Possui sítio oficial próprio na internet?",
+          "matriz": "COMUM", "classificacao": "ESSENCIAL", "subcriterios": ["Disponibilidade"]
+        },
+        {
+          "topico": "1.2", "criterio": "Possui portal da transparência próprio ou compartilhado na internet?",
+          "matriz": "COMUM", "classificacao": "ESSENCIAL", "subcriterios": ["Disponibilidade"]
+        },
+        {
+          "topico": "1.3", "criterio": "O acesso ao portal transparência está visível na capa do site?",
+          "matriz": "COMUM", "classificacao": "OBRIGATÓRIA", "subcriterios": ["Disponibilidade"]
+        },
+        {
+          "topico": "1.4", "criterio": "O site contém ferramenta de pesquisa de conteúdo que permita o acesso à informação?",
+          "matriz": "COMUM", "classificacao": "OBRIGATÓRIA", "subcriterios": ["Disponibilidade"]
+        }
+      ],
+      "INFORMAÇÕES INSTITUCIONAIS": [
+        {
+          "topico": "2.1", "criterio": "Divulga a estrutura organizacional?",
+          "matriz": "COMUM", "classificacao": "OBRIGATÓRIA", "subcriterios": ["Disponibilidade"]
+        },
+        {
+          "topico": "2.2", "criterio": "Divulga competências e/ou atribuições?",
+          "matriz": "COMUM", "classificacao": "OBRIGATÓRIA", "subcriterios": ["Disponibilidade"]
+        },
+        {
+          "topico": "2.3", "criterio": "Identifica o nome dos responsáveis pela gestão do Poder/Órgão?",
+          "matriz": "COMUM", "classificacao": "OBRIGATÓRIA", "subcriterios": ["Disponibilidade"]
+        },
+        {
+          "topico": "2.4", "criterio": "Divulga os endereços e telefones da entidade e e-mails institucionais?",
+          "matriz": "COMUM", "classificacao": "OBRIGATÓRIA", "subcriterios": ["Disponibilidade"]
+        },
+        {
+          "topico": "2.5", "criterio": "Divulga o horário de atendimento?",
+          "matriz": "COMUM", "classificacao": "OBRIGATÓRIA", "subcriterios": ["Disponibilidade"]
+        },
+        {
+          "topico": "2.6", "criterio": "Divulga os atos normativos próprios?",
+          "matriz": "COMUM", "classificacao": "OBRIGATÓRIA", "subcriterios": ["Disponibilidade", "Atualidade", "Série Histórica", "Filtro de Pesquisa"]
+        },
+        {
+          "topico": "2.7", "criterio": "Divulga as perguntas e respostas frequentes?",
+          "matriz": "COMUM", "classificacao": "OBRIGATÓRIA", "subcriterios": ["Disponibilidade"]
+        },
+        {
+          "topico": "2.8", "criterio": "Apresenta link para perfil em redes sociais?",
+          "matriz": "COMUM", "classificacao": "RECOMENDADA", "subcriterios": ["Disponibilidade"]
+        },
+        {
+          "topico": "2.9", "criterio": "Inclui botão do Radar no site institucional?",
+          "matriz": "COMUM", "classificacao": "RECOMENDADA", "subcriterios": ["Disponibilidade"]
+        }
+      ],
+      "RECEITA": [
+        {
+          "topico": "3.1", "criterio": "Divulga as receitas do Poder ou órgão, evidenciando sua previsão e realização?",
+          "matriz": "COMUM", "classificacao": "ESSENCIAL", "subcriterios": ["Disponibilidade", "Atualidade", "Série Histórica", "Gravação de Relatório", "Filtro de Pesquisa"]
+        },
+        {
+          "topico": "3.2", "criterio": "Divulga a classificação orçamentária por natureza da receita (categoria econômica, origem, espécie)?",
+          "matriz": "PODER EXECUTIVO", "classificacao": "ESSENCIAL", "subcriterios": ["Disponibilidade", "Atualidade", "Série Histórica", "Gravação de Relatório", "Filtro de Pesquisa"]
+        },
+        {
+          "topico": "3.3", "criterio": "Divulga a lista dos inscritos em dívida ativa, contendo, no mínimo, dados referentes ao nome do inscrito e o valor total da dívida?",
+          "matriz": "PODER EXECUTIVO", "classificacao": "OBRIGATÓRIA", "subcriterios": ["Disponibilidade", "Atualidade", "Série Histórica", "Gravação de Relatório", "Filtro de Pesquisa"]
+        }
+      ],
+      "DESPESA": [
+        {
+          "topico": "4.1", "criterio": "Divulga o total das despesas empenhadas, liquidadas e pagas?",
+          "matriz": "COMUM", "classificacao": "ESSENCIAL", "subcriterios": ["Disponibilidade", "Atualidade", "Série Histórica", "Gravação de Relatório", "Filtro de Pesquisa"]
+        },
+        {
+          "topico": "4.2", "criterio": "Divulga as despesas por classificação orçamentária?",
+          "matriz": "COMUM", "classificacao": "ESSENCIAL", "subcriterios": ["Disponibilidade", "Atualidade", "Série Histórica", "Gravação de Relatório", "Filtro de Pesquisa"]
+        },
+        {
+          "topico": "4.3", "criterio": "Possibilita a consulta de empenhos com os detalhes do beneficiário do pagamento ou credor, o bem fornecido ou serviço prestado e a identificação do procedimento licitatório originário da despesa?",
+          "matriz": "COMUM", "classificacao": "OBRIGATÓRIA", "subcriterios": ["Disponibilidade", "Atualidade", "Série Histórica", "Gravação de Relatório", "Filtro de Pesquisa"]
+        }
+      ],
+      "CONVÊNIOS E TRANSFERÊNCIAS": [
+        {
+          "topico": "5.1", "criterio": "Identifica as transferências recebidas a partir da celebração de convênios/acordos com indicação, no mínimo, do valor total previsto dos recursos envolvidos, do valor recebido, do objeto e da origem (órgão repassador/concedente)?",
+          "matriz": "COMUM", "classificacao": "OBRIGATÓRIA", "subcriterios": ["Disponibilidade", "Atualidade", "Série Histórica", "Gravação de Relatório", "Filtro de Pesquisa"]
+        },
+        {
+          "topico": "5.2", "criterio": "Identifica as transferências realizadas a partir da celebração de convênios/acordos/ajustes, com indicação, no mínimo, do beneficiário, do objeto, do valor total previsto para repasse e do valor concedido?",
+          "matriz": "COMUM", "classificacao": "OBRIGATÓRIA", "subcriterios": ["Disponibilidade", "Atualidade", "Série Histórica", "Gravação de Relatório", "Filtro de Pesquisa"]
+        },
+        {
+          "topico": "5.3", "criterio": "Identifica os acordos firmados que não envolvam transferência de recursos financeiros, identificando as partes, o objeto e as obrigações ajustadas?",
+          "matriz": "COMUM", "classificacao": "OBRIGATÓRIA", "subcriterios": ["Disponibilidade", "Atualidade", "Série Histórica", "Gravação de Relatório", "Filtro de Pesquisa"]
+        }
+      ],
+      "RECURSOS HUMANOS": [
+        {
+          "topico": "6.1", "criterio": "Divulga a relação nominal dos servidores/autoridades/membros, seus cargos/funções, as respectivas lotações, as suas datas de admissão/exoneração/inativação e a carga horária do cargo/função ocupada/desempenhada?",
+          "matriz": "COMUM", "classificacao": "OBRIGATÓRIA", "subcriterios": ["Disponibilidade", "Atualidade", "Série Histórica", "Gravação de Relatório", "Filtro de Pesquisa"]
+        },
+        {
+          "topico": "6.2", "criterio": "Identifica a remuneração nominal de cada servidor/autoridade/Membro e a tabela com o padrão remuneratório dos cargos e funções?",
+          "matriz": "COMUM", "classificacao": "OBRIGATÓRIA", "subcriterios": ["Disponibilidade", "Atualidade", "Série Histórica", "Gravação de Relatório", "Filtro de Pesquisa"]
+        },
+        {
+          "topico": "6.3", "criterio": "Publica lista de estagiários?",
+          "matriz": "COMUM", "classificacao": "RECOMENDADA", "subcriterios": ["Disponibilidade", "Atualidade", "Série Histórica", "Gravação de Relatório", "Filtro de Pesquisa"]
+        },
+        {
+          "topico": "6.4", "criterio": "Publica lista dos terceirizados que prestam serviços para o Poder ou órgão/entidades, contendo, em relação a cada um deles: nome completo, função ou atividade exercida e nome da empresa empregadora?",
+          "matriz": "COMUM", "classificacao": "RECOMENDADA", "subcriterios": ["Disponibilidade", "Atualidade", "Série Histórica", "Gravação de Relatório", "Filtro de Pesquisa"]
+        },
+        {
+          "topico": "6.5", "criterio": "Divulga a íntegra dos editais de concursos e seleções públicas realizados pelo Poder ou órgão para provimento de cargos e empregos públicos?",
+          "matriz": "COMUM", "classificacao": "OBRIGATÓRIA", "subcriterios": ["Disponibilidade", "Atualidade", "Série Histórica", "Filtro de Pesquisa"]
+        },
+        {
+          "topico": "6.6", "criterio": "Divulga informações sobre os demais atos dos concursos públicos e processos seletivos do Poder ou órgão, contendo no mínimo a lista de aprovados com as classificações e as nomeações?",
+          "matriz": "COMUM", "classificacao": "OBRIGATÓRIA", "subcriterios": ["Disponibilidade", "Atualidade", "Gravação de Relatório", "Filtro de Pesquisa"]
+        }
+      ],
+      "DIÁRIAS": [
+        {
+          "topico": "7.1", "criterio": "Divulga o nome e o cargo/função do beneficiário, além do valor total recebido, número de diárias usufruídas por afastamento, período de afastamento, motivo do afastamento e local de destino?",
+          "matriz": "COMUM", "classificacao": "OBRIGATÓRIA", "subcriterios": ["Disponibilidade", "Atualidade", "Série Histórica", "Gravação de Relatório", "Filtro de Pesquisa"]
+        },
+        {
+          "topico": "7.2", "criterio": "Divulga tabela ou relação que explicite os valores das diárias dentro do Estado, fora do Estado e fora do país, conforme legislação local?",
+          "matriz": "COMUM", "classificacao": "OBRIGATÓRIA", "subcriterios": ["Disponibilidade", "Atualidade", "Série Histórica", "Filtro de Pesquisa"]
+        }
+      ],
+      "LICITAÇÕES": [
+        {
+          "topico": "8.1", "criterio": "Divulga a relação das licitações em ordem sequencial, informando o número e modalidade licitatória, o objeto, a data, o valor estimado/homologado e a situação?",
+          "matriz": "COMUM", "classificacao": "OBRIGATÓRIA", "subcriterios": ["Disponibilidade", "Atualidade", "Série Histórica", "Gravação de Relatório", "Filtro de Pesquisa"]
+        },
+        {
+          "topico": "8.2", "criterio": "Divulga a íntegra dos editais de licitação?",
+          "matriz": "COMUM", "classificacao": "OBRIGATÓRIA", "subcriterios": ["Disponibilidade", "Atualidade", "Série Histórica", "Filtro de Pesquisa"]
+        },
+        {
+          "topico": "8.3", "criterio": "Divulga a íntegra dos demais documentos das fases interna e externa das licitações?",
+          "matriz": "COMUM", "classificacao": "OBRIGATÓRIA", "subcriterios": ["Disponibilidade", "Atualidade", "Série Histórica", "Filtro de Pesquisa"]
+        },
+        {
+          "topico": "8.4", "criterio": "Divulga a íntegra dos principais documentos dos processos de dispensa e inexigibilidade de licitação?",
+          "matriz": "COMUM", "classificacao": "OBRIGATÓRIA", "subcriterios": ["Disponibilidade", "Atualidade", "Série Histórica", "Filtro de Pesquisa"]
+        },
+        {
+          "topico": "8.5", "criterio": "Divulga a íntegra das Atas de Adesão – SRP?",
+          "matriz": "COMUM", "classificacao": "OBRIGATÓRIA", "subcriterios": ["Disponibilidade", "Atualidade", "Série Histórica", "Filtro de Pesquisa"]
+        },
+        {
+          "topico": "8.6", "criterio": "Publica plano anual de contratações?",
+          "matriz": "COMUM", "classificacao": "RECOMENDADA", "subcriterios": ["Disponibilidade", "Atualidade"]
+        },
+        {
+          "topico": "8.7", "criterio": "Divulga a relação dos licitantes e/ou contratados sancionados administrativamente pelo Poder ou órgão?",
+          "matriz": "COMUM", "classificacao": "RECOMENDADA", "subcriterios": ["Disponibilidade", "Atualidade", "Série Histórica", "Gravação de Relatório", "Filtro de Pesquisa"]
+        }
+      ],
+      "CONTRATOS": [
+        {
+          "topico": "9.1", "criterio": "Divulga a relação dos contratos celebrados em ordem sequencial, com o seu respectivo resumo, contendo, no mínimo, indicação do contratado(a), do valor, do objeto e da vigência, bem como dos aditivos deles decorrentes?",
+          "matriz": "COMUM", "classificacao": "OBRIGATÓRIA", "subcriterios": ["Disponibilidade", "Atualidade", "Série Histórica", "Gravação de Relatório", "Filtro de Pesquisa"]
+        },
+        {
+          "topico": "9.2", "criterio": "Divulga o inteiro teor dos contratos e dos respectivos termos aditivos?",
+          "matriz": "COMUM", "classificacao": "OBRIGATÓRIA", "subcriterios": ["Disponibilidade", "Atualidade", "Série Histórica", "Filtro de Pesquisa"]
+        },
+        {
+          "topico": "9.3", "criterio": "Divulga a relação/lista dos fiscais de cada contrato vigente e encerrado?",
+          "matriz": "COMUM", "classificacao": "OBRIGATÓRIA", "subcriterios": ["Disponibilidade", "Atualidade", "Série Histórica", "Gravação de Relatório", "Filtro de Pesquisa"]
+        },
+        {
+          "topico": "9.4", "criterio": "Divulga a ordem cronológica de seus pagamentos, bem como as justificativas que fundamentaram a eventual alteração dessa ordem?",
+          "matriz": "COMUM", "classificacao": "OBRIGATÓRIA", "subcriterios": ["Disponibilidade", "Atualidade", "Série Histórica", "Gravação de Relatório", "Filtro de Pesquisa"]
+        }
+      ],
+      "OBRAS": [
+        {
+          "topico": "10.1", "criterio": "Divulga informações sobre as obras contendo o objeto, a situação atual, as datas de início e de conclusão da obra, empresa contratada e o percentual concluído?",
+          "matriz": "COMUM", "classificacao": "RECOMENDADA", "subcriterios": ["Disponibilidade", "Atualidade", "Gravação de Relatório", "Filtro de Pesquisa"]
+        },
+        {
+          "topico": "10.2", "criterio": "Divulga os quantitativos, os preços unitários e totais contratados?",
+          "matriz": "COMUM", "classificacao": "OBRIGATÓRIA", "subcriterios": ["Disponibilidade", "Atualidade", "Gravação de Relatório"]
+        },
+        {
+          "topico": "10.3", "criterio": "Divulga os quantitativos executados e os preços efetivamente pagos?",
+          "matriz": "COMUM", "classificacao": "OBRIGATÓRIA", "subcriterios": ["Disponibilidade", "Atualidade", "Gravação de Relatório"]
+        },
+        {
+          "topico": "10.4", "criterio": "Divulga relação das obras paralisadas contendo o motivo, o responsável pela inexecução temporária do objeto do contrato e a data prevista para o reinício da sua execução?",
+          "matriz": "COMUM", "classificacao": "OBRIGATÓRIA", "subcriterios": ["Disponibilidade", "Atualidade", "Gravação de Relatório", "Filtro de Pesquisa"]
+        }
+      ],
+      "PLANEJAMENTO E PRESTAÇÃO DE CONTAS": [
+        {
+          "topico": "11.1", "criterio": "Publica a Prestação de Contas do Ano Anterior (Balanço Geral)?",
+          "matriz": "COMUM", "classificacao": "OBRIGATÓRIA", "subcriterios": ["Disponibilidade", "Atualidade", "Série Histórica", "Filtro de Pesquisa"]
+        },
+        {
+          "topico": "11.2", "criterio": "Divulga o Relatório de Gestão ou Atividades?",
+          "matriz": "COMUM", "classificacao": "OBRIGATÓRIA", "subcriterios": ["Disponibilidade", "Atualidade", "Série Histórica", "Filtro de Pesquisa"]
+        },
+        {
+          "topico": "11.3", "criterio": "Divulga a íntegra da decisão da apreciação ou julgamento das contas pelo Tribunal de Contas?",
+          "matriz": "COMUM", "classificacao": "OBRIGATÓRIA", "subcriterios": ["Disponibilidade", "Atualidade", "Série Histórica"]
+        },
+        {
+          "topico": "11.4", "criterio": "Divulga o resultado do julgamento das Contas do Chefe do Poder Executivo pelo Poder Legislativo?",
+          "matriz": "PODER EXECUTIVO", "classificacao": "OBRIGATÓRIA", "subcriterios": ["Disponibilidade", "Atualidade", "Série Histórica"]
+        },
+        {
+          "topico": "11.5", "criterio": "Divulga o Relatório de Gestão Fiscal (RGF)?",
+          "matriz": "COMUM", "classificacao": "ESSENCIAL", "subcriterios": ["Disponibilidade", "Atualidade", "Série Histórica", "Filtro de Pesquisa"]
+        },
+        {
+          "topico": "11.6", "criterio": "Divulga o Relatório Resumido da Execução Orçamentária (RREO)?",
+          "matriz": "PODER EXECUTIVO", "classificacao": "ESSENCIAL", "subcriterios": ["Disponibilidade", "Atualidade", "Série Histórica", "Filtro de Pesquisa"]
+        },
+        {
+          "topico": "11.7", "criterio": "Divulga o plano estratégico institucional?",
+          "matriz": "COMUM", "classificacao": "RECOMENDADA", "subcriterios": ["Disponibilidade"]
+        },
+        {
+          "topico": "11.8", "criterio": "Divulga a Lei do Plano Plurianual (PPA) e seus anexos?",
+          "matriz": "PODER EXECUTIVO", "classificacao": "ESSENCIAL", "subcriterios": ["Disponibilidade"]
+        },
+        {
+          "topico": "11.9", "criterio": "Divulga a Lei de Diretrizes Orçamentárias (LDO) e seus anexos?",
+          "matriz": "PODER EXECUTIVO", "classificacao": "ESSENCIAL", "subcriterios": ["Disponibilidade"]
+        },
+        {
+          "topico": "11.10", "criterio": "Divulga a Lei Orçamentária (LOA) e seus anexos?",
+          "matriz": "PODER EXECUTIVO", "classificacao": "ESSENCIAL", "subcriterios": ["Disponibilidade"]
+        }
+      ],
+      "SIC (SERVIÇO DE INFORMAÇÃO AO CIDADÃO)": [
+        {
+          "topico": "12.1", "criterio": "Existe o SIC no site e indica a unidade/setor responsável?",
+          "matriz": "COMUM", "classificacao": "OBRIGATÓRIA", "subcriterios": ["Disponibilidade"]
+        },
+        {
+          "topico": "12.2", "criterio": "Indica o endereço físico, o telefone e o e-mail da unidade responsável pelo SIC, além do horário de funcionamento?",
+          "matriz": "COMUM", "classificacao": "OBRIGATÓRIA", "subcriterios": ["Disponibilidade"]
+        },
+        {
+          "topico": "12.3", "criterio": "Há possibilidade de envio de pedidos de informação de forma eletrônica (e-SIC)?",
+          "matriz": "COMUM", "classificacao": "OBRIGATÓRIA", "subcriterios": ["Disponibilidade"]
+        },
+        {
+          "topico": "12.4", "criterio": "A solicitação por meio de eSic é simples, ou seja, sem a exigência de itens de identificação do requerente que dificultem ou impossibilitem o acesso à informação, tais como: envio de documentos, assinatura reconhecida, declaração de responsabilidade, maioridade?",
+          "matriz": "COMUM", "classificacao": "OBRIGATÓRIA", "subcriterios": ["Disponibilidade"]
+        },
+        {
+          "topico": "12.5", "criterio": "Divulga nesta seção, instrumento normativo local que regulamente a Lei nº 12.527/2011 – LAI?",
+          "matriz": "COMUM", "classificacao": "OBRIGATÓRIA", "subcriterios": ["Disponibilidade"]
+        },
+        {
+          "topico": "12.6", "criterio": "Divulga, na seção relativa ao e-SIC, os prazos de resposta ao cidadão, incluindo o recursal, e as autoridades competentes para o exame dos pedidos, além do procedimento referente à realização do pedido e de eventual recurso?",
+          "matriz": "COMUM", "classificacao": "RECOMENDADA", "subcriterios": ["Disponibilidade"]
+        },
+        {
+          "topico": "12.7", "criterio": "Divulga relatório anual estatístico contendo a quantidade de pedidos de acesso recebidos, atendidos, indeferidos, bem como informações genéricas sobre os solicitantes?",
+          "matriz": "COMUM", "classificacao": "OBRIGATÓRIA", "subcriterios": ["Disponibilidade", "Atualidade", "Série Histórica", "Gravação de Relatório", "Filtro de Pesquisa"]
+        },
+        {
+          "topico": "12.8", "criterio": "Divulga lista de documentos classificados em cada grau de sigilo, contendo pelo menos o assunto sobre o qual versa a informação, a categoria na qual ela se encontra, o dispositivo legal que fundamenta a classificação e o respectivo prazo?",
+          "matriz": "COMUM", "classificacao": "OBRIGATÓRIA", "subcriterios": ["Disponibilidade", "Atualidade", "Série Histórica", "Gravação de Relatório", "Filtro de Pesquisa"]
+        },
+        {
+          "topico": "12.9", "criterio": "Divulga lista das informações que tenham sido desclassificadas nos últimos 12 (doze) meses?",
+          "matriz": "COMUM", "classificacao": "OBRIGATÓRIA", "subcriterios": ["Disponibilidade", "Atualidade", "Série Histórica", "Gravação de Relatório", "Filtro de Pesquisa"]
+        }
+      ],
+      "ACESSIBILIDADE": [
+        {
+          "topico": "13.1", "criterio": "O site oficial e o portal de transparência contêm símbolo de acessibilidade em destaque?",
+          "matriz": "COMUM", "classificacao": "OBRIGATÓRIA", "subcriterios": ["Disponibilidade"]
+        },
+        {
+          "topico": "13.2", "criterio": "O site e o portal de transparência contêm exibição do “caminho” de páginas percorridas pelo usuário?",
+          "matriz": "COMUM", "classificacao": "OBRIGATÓRIA", "subcriterios": ["Disponibilidade"]
+        },
+        {
+          "topico": "13.3", "criterio": "O site e o portal de transparência contêm opção de alto contraste?",
+          "matriz": "COMUM", "classificacao": "OBRIGATÓRIA", "subcriterios": ["Disponibilidade"]
+        },
+        {
+          "topico": "13.4", "criterio": "O site e o portal de transparência contêm ferramenta de redimensionamento de texto?",
+          "matriz": "COMUM", "classificacao": "OBRIGATÓRIA", "subcriterios": ["Disponibilidade"]
+        },
+        {
+          "topico": "13.5", "criterio": "Contém mapa do site institucional?",
+          "matriz": "COMUM", "classificacao": "RECOMENDADA", "subcriterios": ["Disponibilidade"]
+        }
+      ],
+      "OUVIDORIA": [
+        {
+          "topico": "14.1", "criterio": "Há informações sobre o atendimento presencial pela Ouvidoria (Indicação de endereço físico e telefone, além do horário de funcionamento)?",
+          "matriz": "COMUM", "classificacao": "OBRIGATÓRIA", "subcriterios": ["Disponibilidade"]
+        },
+        {
+          "topico": "14.2", "criterio": "Há canal eletrônico de acesso/interação com a ouvidoria?",
+          "matriz": "COMUM", "classificacao": "OBRIGATÓRIA", "subcriterios": ["Disponibilidade"]
+        },
+        {
+          "topico": "14.3", "criterio": "Divulga Carta de Serviços ao Usuário?",
+          "matriz": "COMUM", "classificacao": "OBRIGATÓRIA", "subcriterios": ["Disponibilidade"]
+        }
+      ],
+      "LGPD E GOVERNO DIGITAL": [
+        {
+          "topico": "15.1", "criterio": "Identifica o encarregado/responsável pelo tratamento de dados pessoais e disponibiliza Canal de Comunicação (telefone e/ou e-mail)?",
+          "matriz": "COMUM", "classificacao": "OBRIGATÓRIA", "subcriterios": ["Disponibilidade"]
+        },
+        {
+          "topico": "15.2", "criterio": "Publica a sua Política de Privacidade e Proteção de Dados?",
+          "matriz": "COMUM", "classificacao": "OBRIGATÓRIA", "subcriterios": ["Disponibilidade"]
+        },
+        {
+          "topico": "15.3", "criterio": "Possibilita a demanda e o acesso a serviços públicos por meio digital, sem necessidade de solicitação presencial?",
+          "matriz": "COMUM", "classificacao": "OBRIGATÓRIA", "subcriterios": ["Disponibilidade"]
+        },
+        {
+          "topico": "15.4", "criterio": "Possibilita o acesso automatizado por sistemas externos em dados (estruturados e legíveis por máquina), e a página contém as regras de abertos utilização?",
+          "matriz": "COMUM", "classificacao": "OBRIGATÓRIA", "subcriterios": ["Disponibilidade"]
+        },
+        {
+          "topico": "15.5", "criterio": "Regulamenta a Lei Federal nº 14.129/2021 (Governo Digital) e divulga a normativa em seu portal?",
+          "matriz": "COMUM", "classificacao": "RECOMENDADA", "subcriterios": ["Disponibilidade"]
+        },
+        {
+          "topico": "15.6", "criterio": "Realiza e divulga resultados de pesquisas de satisfação?",
+          "matriz": "COMUM", "classificacao": "OBRIGATÓRIA", "subcriterios": ["Disponibilidade"]
+        }
+      ],
+      "RENÚNCIAS FISCAIS": [
+        {
+          "topico": "16.1", "criterio": "Divulga as desonerações tributárias concedidas e a fundamentação legal individualizada?",
+          "matriz": "PODER EXECUTIVO", "classificacao": "RECOMENDADA", "subcriterios": ["Disponibilidade"]
+        },
+        {
+          "topico": "16.2", "criterio": "Divulga os valores da renúncia fiscal prevista e realizada, por tipo ou espécie de benefício ou incentivo fiscal?",
+          "matriz": "PODER EXECUTIVO", "classificacao": "RECOMENDADA", "subcriterios": ["Disponibilidade", "Atualidade", "Série Histórica", "Gravação de Relatório", "Filtro de Pesquisa"]
+        },
+        {
+          "topico": "16.3", "criterio": "Identifica os beneficiários das desonerações tributárias (benefícios ou incentivos fiscais)?",
+          "matriz": "PODER EXECUTIVO", "classificacao": "RECOMENDADA", "subcriterios": ["Disponibilidade", "Atualidade", "Série Histórica", "Gravação de Relatório", "Filtro de Pesquisa"]
+        },
+        {
+          "topico": "16.4", "criterio": "Divulga informações sobre projetos de incentivo à cultura (incluindo esportivos), identificando os projetos aprovados, o respectivo beneficiárioe o valor aprovado?",
+          "matriz": "PODER EXECUTIVO", "classificacao": "RECOMENDADA", "subcriterios": ["Disponibilidade", "Atualidade", "Série Histórica", "Gravação de Relatório", "Filtro de Pesquisa"]
+        }
+      ],
+      "EMENDAS PARLAMENTARES": [
+        {
+          "topico": "17.1", "criterio": "Identifica as emendas parlamentares recebidas, contendo informações sobre a origem, a forma de repasse, o tipo de emenda, o número da emenda, a autoria, o valor previsto e realizado, o objeto e função de governo?",
+          "matriz": "PODER EXECUTIVO", "classificacao": "RECOMENDADA", "subcriterios": ["Disponibilidade", "Atualidade", "Série Histórica", "Gravação de Relatório", "Filtro de Pesquisa"]
+        },
+        {
+          "topico": "17.2", "criterio": "Demonstra a execução orçamentária e financeira oriunda das emendas pix”?",
+          "matriz": "PODER EXECUTIVO", "classificacao": "RECOMENDADA", "subcriterios": ["Disponibilidade", "Atualidade", "Série Histórica", "Gravação de Relatório", "Filtro de Pesquisa"]
+        }
+      ],
+      "SAÚDE": [
+        {
+          "topico": "18.1", "criterio": "Divulga o plano de saúde, a programação anual e o relatório de gestão?",
+          "matriz": "PODER EXECUTIVO", "classificacao": "OBRIGATÓRIA", "subcriterios": ["Disponibilidade", "Atualidade", "Série Histórica", "Filtro de Pesquisa"]
+        },
+        {
+          "topico": "18.2", "criterio": "Divulga informações relacionadas aos serviços de saúde, indicando os horários, os profissionais prestadores de serviços, as especialidades e local?",
+          "matriz": "PODER EXECUTIVO", "classificacao": "OBRIGATORIA", "subcriterios": ["Disponibilidade", "Atualidade", "Filtro de Pesquisa"]
+        },
+        {
+          "topico": "18.3", "criterio": "Divulga a lista de espera de regulação para acesso às consultas,exames e serviços médicos ?",
+          "matriz": "PODER EXECUTIVO", "classificacao": "RECOMENDADA", "subcriterios": ["Disponibilidade"]
+        },
+        {
+          "topico": "18.4", "criterio": "Divulga lista dos medicamentos a serem fornecidos pelo SUS e informações de como obter medicamentos, incluindo os de alto custo?",
+          "matriz": "PODER EXECUTIVO", "classificacao": "RECOMENDADA", "subcriterios": ["Disponibilidade", "Atualidade", "Filtro de Pesquisa"]
+        },
+        {
+          "topico": "18.5", "criterio": "Divulga os estoques de medicamentos das farmácias públicas?",
+          "matriz": "PODER EXECUTIVO", "classificacao": "OBRIGATÓRIA", "subcriterios": ["Disponibilidade", "Atualidade", "Filtro de Pesquisa"]
+        }
+      ],
+      "EDUCAÇÃO": [
+        {
+          "topico": "19.1", "criterio": "Divulga o plano de educação e o respectivo relatório de resultados?",
+          "matriz": "PODER EXECUTIVO", "classificacao": "RECOMENDADA", "subcriterios": ["Disponibilidade", "Atualidade", "Série Histórica", "Filtro de Pesquisa"]
+        },
+        {
+          "topico": "19.2", "criterio": "Divulga a lista de espera em creches públicas e os critérios de priorização de acesso a elas?",
+          "matriz": "PODER EXECUTIVO", "classificacao": "OBRIGATÓRIA", "subcriterios": ["Disponibilidade", "Atualidade"]
+        }
+      ]
+    },
+"Câmara": {
+    "INFORMAÇÕES PRIORITÁRIAS": [
+        { "topico": "1.1", "criterio": "Possui sítio oficial próprio na internet?", "matriz": "COMUM", "classificacao": "ESSENCIAL", "subcriterios": ["Disponibilidade"] },
+        { "topico": "1.2", "criterio": "Possui portal da transparência próprio ou compartilhado na internet?", "matriz": "COMUM", "classificacao": "ESSENCIAL", "subcriterios": ["Disponibilidade"] },
+        { "topico": "1.3", "criterio": "O acesso ao portal transparência está visível na capa do site?", "matriz": "COMUM", "classificacao": "OBRIGATÓRIA", "subcriterios": ["Disponibilidade"] },
+        { "topico": "1.4", "criterio": "O site contém ferramenta de pesquisa de conteúdo que permita o acesso à informação?", "matriz": "COMUM", "classificacao": "OBRIGATÓRIA", "subcriterios": ["Disponibilidade"] }
+    ],
+    "INFORMAÇÕES INSTITUCIONAIS": [
+        { "topico": "2.1", "criterio": "Divulga a estrutura organizacional?", "matriz": "COMUM", "classificacao": "OBRIGATÓRIA", "subcriterios": ["Disponibilidade"] },
+        { "topico": "2.2", "criterio": "Divulga competências e/ou atribuições?", "matriz": "COMUM", "classificacao": "OBRIGATÓRIA", "subcriterios": ["Disponibilidade"] },
+        { "topico": "2.3", "criterio": "Identifica o nome dos responsáveis pela gestão do Poder/Órgão?", "matriz": "COMUM", "classificacao": "OBRIGATÓRIA", "subcriterios": ["Disponibilidade"] },
+        { "topico": "2.4", "criterio": "Divulga os endereços e telefones da entidade e e-mails institucionais?", "matriz": "COMUM", "classificacao": "OBRIGATÓRIA", "subcriterios": ["Disponibilidade"] },
+        { "topico": "2.5", "criterio": "Divulga o horário de atendimento?", "matriz": "COMUM", "classificacao": "OBRIGATÓRIA", "subcriterios": ["Disponibilidade"] },
+        { "topico": "2.6", "criterio": "Divulga os atos normativos próprios?", "matriz": "COMUM", "classificacao": "OBRIGATÓRIA", "subcriterios": ["Disponibilidade", "Atualidade", "Série Histórica", "Filtro de Pesquisa"] },
+        { "topico": "2.7", "criterio": "Divulga as perguntas e respostas frequentes?", "matriz": "COMUM", "classificacao": "RECOMENDADA", "subcriterios": ["Disponibilidade"] },
+        { "topico": "2.8", "criterio": "Apresenta link para perfil em redes sociais?", "matriz": "COMUM", "classificacao": "RECOMENDADA", "subcriterios": ["Disponibilidade"] },
+        { "topico": "2.9", "criterio": "Inclui botão do Radar no site institucional?", "matriz": "COMUM", "classificacao": "RECOMENDADA", "subcriterios": ["Disponibilidade"] }
+    ],
+    "RECEITA": [
+      { "topico": "3.1", "criterio": "Divulga as receitas do Poder ou órgão, evidenciando sua previsão e realização?", "matriz": "COMUM", "classificacao": "ESSENCIAL", "subcriterios": ["Disponibilidade", "Atualidade", "Série Histórica", "Gravação de Relatório", "Filtro de Pesquisa"] }
+    ],
+    "DESPESA": [
+      { "topico": "4.1", "criterio": "Divulga o total das despesas empenhadas, liquidadas e pagas?", "matriz": "COMUM", "classificacao": "ESSENCIAL", "subcriterios": ["Disponibilidade", "Atualidade", "Série Histórica", "Gravação de Relatório", "Filtro de Pesquisa"] },
+      { "topico": "4.2", "criterio": "Divulga as despesas por classificação orçamentária?", "matriz": "COMUM", "classificacao": "ESSENCIAL", "subcriterios": ["Disponibilidade", "Atualidade", "Série Histórica", "Gravação de Relatório", "Filtro de Pesquisa"] },
+      { "topico": "4.3", "criterio": "Possibilita a consulta de empenhos com os detalhes do beneficiário do pagamento ou credor, o bem fornecido ou serviço prestado e a identificação do procedimento licitatório originário da despesa?", "matriz": "COMUM", "classificacao": "OBRIGATÓRIA", "subcriterios": ["Disponibilidade", "Atualidade", "Série Histórica", "Gravação de Relatório", "Filtro de Pesquisa"] }
+    ],
+    "CONVÊNIOS E TRANSFERÊNCIAS": [
+      { "topico": "5.1", "criterio": "Identifica as transferências recebidas a partir da celebração de convênios/acordos com indicação, no mínimo, do valor total previsto dos recursos envolvidos, do valor recebido, do objeto e da origem (órgão repassador/concedente)?", "matriz": "COMUM", "classificacao": "OBRIGATÓRIA", "subcriterios": ["Disponibilidade", "Atualidade", "Série Histórica", "Gravação de Relatório", "Filtro de Pesquisa"] },
+      { "topico": "5.2", "criterio": "Identifica as transferências realizadas a partir da celebração de convênios/acordos/ajustes, com indicação, no mínimo, do beneficiário, do objeto, do valor total previsto para repasse e do valor concedido?", "matriz": "COMUM", "classificacao": "OBRIGATÓRIA", "subcriterios": ["Disponibilidade", "Atualidade", "Série Histórica", "Gravação de Relatório", "Filtro de Pesquisa"] },
+      { "topico": "5.3", "criterio": "Identifica os acordos firmados que não envolvam transferência de recursos financeiros, identificando as partes, o objeto e as obrigações ajustadas?", "matriz": "COMUM", "classificacao": "OBRIGATÓRIA", "subcriterios": ["Disponibilidade", "Atualidade", "Série Histórica", "Gravação de Relatório", "Filtro de Pesquisa"] }
+    ],
+    "RECURSOS HUMANOS": [
+      { "topico": "6.1", "criterio": "Divulga a relação nominal dos servidores/autoridades/membros, seus cargos/funções, as respectivas lotações, as suas datas de admissão/exoneração/inativação e a carga horária do cargo/função ocupada/desempenhada?", "matriz": "COMUM", "classificacao": "OBRIGATÓRIA", "subcriterios": ["Disponibilidade", "Atualidade", "Série Histórica", "Gravação de Relatório", "Filtro de Pesquisa"] },
+      { "topico": "6.2", "criterio": "Identifica a remuneração nominal de cada servidor/autoridade/Membro e a tabela com o padrão remuneratório dos cargos e funções?", "matriz": "COMUM", "classificacao": "OBRIGATÓRIA", "subcriterios": ["Disponibilidade", "Atualidade", "Série Histórica", "Gravação de Relatório", "Filtro de Pesquisa"] },
+      { "topico": "6.3", "criterio": "Publica lista de estagiários?", "matriz": "COMUM", "classificacao": "RECOMENDADA", "subcriterios": ["Disponibilidade", "Atualidade", "Série Histórica", "Gravação de Relatório", "Filtro de Pesquisa"] },
+      { "topico": "6.4", "criterio": "Publica lista dos terceirizados que prestam serviços para o Poder ou órgão/entidades, contendo, em relação a cada um deles: nome completo, função ou atividade exercida e nome da empresa empregadora?", "matriz": "COMUM", "classificacao": "RECOMENDADA", "subcriterios": ["Disponibilidade", "Atualidade", "Série Histórica", "Gravação de Relatório", "Filtro de Pesquisa"] },
+      { "topico": "6.5", "criterio": "Divulga a íntegra dos editais de concursos e seleções públicas realizados pelo Poder ou órgão para provimento de cargos e empregos públicos?", "matriz": "COMUM", "classificacao": "OBRIGATÓRIA", "subcriterios": ["Disponibilidade", "Atualidade", "Série Histórica", "Filtro de Pesquisa"] },
+      { "topico": "6.6", "criterio": "Divulga informações sobre os demais atos dos concursos públicos e processos seletivos do Poder ou órgão, contendo no mínimo a lista de aprovados com as classificações e as nomeações?", "matriz": "COMUM", "classificacao": "OBRIGATÓRIA", "subcriterios": ["Disponibilidade", "Atualidade", "Gravação de Relatório", "Filtro de Pesquisa"] }
+    ],
+    "DIÁRIAS": [
+      { "topico": "7.1", "criterio": "Divulga o nome e o cargo/função do beneficiário, além do valor total recebido, número de diárias usufruídas por afastamento, período de afastamento, motivo do afastamento e local de destino?", "matriz": "COMUM", "classificacao": "OBRIGATÓRIA", "subcriterios": ["Disponibilidade", "Atualidade", "Série Histórica", "Gravação de Relatório", "Filtro de Pesquisa"] },
+      { "topico": "7.2", "criterio": "Divulga tabela ou relação que explicite os valores das diárias dentro do Estado, fora do Estado e fora do país, conforme legislação local?", "matriz": "COMUM", "classificacao": "OBRIGATÓRIA", "subcriterios": ["Disponibilidade", "Atualidade", "Série Histórica", "Filtro de Pesquisa"] }
+    ],
+    "LICITAÇÕES": [
+      { "topico": "8.1", "criterio": "Divulga a relação das licitações em ordem sequencial, informando o número e modalidade licitatória, o objeto, a data, o valor estimado/homologado e a situação?", "matriz": "COMUM", "classificacao": "OBRIGATÓRIA", "subcriterios": ["Disponibilidade", "Atualidade", "Série Histórica", "Gravação de Relatório", "Filtro de Pesquisa"] },
+      { "topico": "8.2", "criterio": "Divulga a íntegra dos editais de licitação?", "matriz": "COMUM", "classificacao": "OBRIGATÓRIA", "subcriterios": ["Disponibilidade", "Atualidade", "Série Histórica", "Filtro de Pesquisa"] },
+      { "topico": "8.3", "criterio": "Divulga a íntegra dos demais documentos das fases interna e externa das licitações?", "matriz": "COMUM", "classificacao": "OBRIGATÓRIA", "subcriterios": ["Disponibilidade", "Atualidade", "Série Histórica", "Filtro de Pesquisa"] },
+      { "topico": "8.4", "criterio": "Divulga a íntegra dos principais documentos dos processos de dispensa e inexigibilidade de licitação?", "matriz": "COMUM", "classificacao": "OBRIGATÓRIA", "subcriterios": ["Disponibilidade", "Atualidade", "Série Histórica", "Filtro de Pesquisa"] },
+      { "topico": "8.5", "criterio": "Divulga a íntegra das Atas de Adesão – SRP?", "matriz": "COMUM", "classificacao": "OBRIGATÓRIA", "subcriterios": ["Disponibilidade", "Atualidade", "Série Histórica", "Filtro de Pesquisa"] },
+      { "topico": "8.6", "criterio": "Publica plano anual de contratações?", "matriz": "COMUM", "classificacao": "RECOMENDADA", "subcriterios": ["Disponibilidade", "Atualidade"] },
+      { "topico": "8.7", "criterio": "Divulga a relação dos licitantes e/ou contratados sancionados administrativamente pelo Poder ou órgão?", "matriz": "COMUM", "classificacao": "RECOMENDADA", "subcriterios": ["Disponibilidade", "Atualidade", "Série Histórica", "Gravação de Relatório", "Filtro de Pesquisa"] }
+    ],
+    "CONTRATOS": [
+      { "topico": "9.1", "criterio": "Divulga a relação dos contratos celebrados em ordem sequencial, com o seu respectivo resumo, contendo, no mínimo, indicação do contratado(a), do valor, do objeto e da vigência, bem como dos aditivos deles decorrentes?", "matriz": "COMUM", "classificacao": "OBRIGATÓRIA", "subcriterios": ["Disponibilidade", "Atualidade", "Série Histórica", "Gravação de Relatório", "Filtro de Pesquisa"] },
+      { "topico": "9.2", "criterio": "Divulga o inteiro teor dos contratos e dos respectivos termos aditivos?", "matriz": "COMUM", "classificacao": "OBRIGATÓRIA", "subcriterios": ["Disponibilidade", "Atualidade", "Série Histórica", "Filtro de Pesquisa"] },
+      { "topico": "9.3", "criterio": "Divulga a relação/lista dos fiscais de cada contrato vigente e encerrado?", "matriz": "COMUM", "classificacao": "OBRIGATÓRIA", "subcriterios": ["Disponibilidade", "Atualidade", "Série Histórica", "Gravação de Relatório", "Filtro de Pesquisa"] },
+      { "topico": "9.4", "criterio": "Divulga a ordem cronológica de seus pagamentos, bem como as justificativas que fundamentaram a eventual alteração dessa ordem?", "matriz": "COMUM", "classificacao": "OBRIGATÓRIA", "subcriterios": ["Disponibilidade", "Atualidade", "Série Histórica", "Gravação de Relatório", "Filtro de Pesquisa"] }
+    ],
+    "OBRAS": [
+      { "topico": "10.1", "criterio": "Divulga informações sobre as obras contendo o objeto, a situação atual, as datas de início e de conclusão da obra, empresa contratada e o percentual concluído?", "matriz": "COMUM", "classificacao": "RECOMENDADA", "subcriterios": ["Disponibilidade", "Atualidade", "Gravação de Relatório", "Filtro de Pesquisa"] },
+      { "topico": "10.2", "criterio": "Divulga os quantitativos, os preços unitários e totais contratados?", "matriz": "COMUM", "classificacao": "OBRIGATÓRIA", "subcriterios": ["Disponibilidade", "Atualidade", "Gravação de Relatório"] },
+      { "topico": "10.3", "criterio": "Divulga os quantitativos executados e os preços efetivamente pagos?", "matriz": "COMUM", "classificacao": "OBRIGATÓRIA", "subcriterios": ["Disponibilidade", "Atualidade", "Gravação de Relatório"] },
+      { "topico": "10.4", "criterio": "Divulga relação das obras paralisadas contendo o motivo, o responsável pela inexecução temporária do objeto do contrato e a data prevista para o reinício da sua execução?", "matriz": "COMUM", "classificacao": "OBRIGATÓRIA", "subcriterios": ["Disponibilidade", "Atualidade", "Gravação de Relatório", "Filtro de Pesquisa"] }
+    ],
+    "PLANEJAMENTO E PRESTAÇÃO DE CONTAS": [
+      { "topico": "11.1", "criterio": "Publica a Prestação de Contas do Ano Anterior (Balanço Geral)?", "matriz": "COMUM", "classificacao": "OBRIGATÓRIA", "subcriterios": ["Disponibilidade", "Atualidade", "Série Histórica", "Filtro de Pesquisa"] },
+      { "topico": "11.2", "criterio": "Divulga o Relatório de Gestão ou Atividades?", "matriz": "COMUM", "classificacao": "OBRIGATÓRIA", "subcriterios": ["Disponibilidade", "Atualidade", "Série Histórica", "Filtro de Pesquisa"] },
+      { "topico": "11.3", "criterio": "Divulga a íntegra da decisão da apreciação ou julgamento das contas pelo Tribunal de Contas?", "matriz": "COMUM", "classificacao": "OBRIGATÓRIA", "subcriterios": ["Disponibilidade", "Atualidade", "Série Histórica"] },
+      { "topico": "11.5", "criterio": "Divulga o Relatório de Gestão Fiscal (RGF)?", "matriz": "COMUM", "classificacao": "ESSENCIAL", "subcriterios": ["Disponibilidade", "Atualidade", "Série Histórica", "Filtro de Pesquisa"] },
+      { "topico": "11.7", "criterio": "Divulga o plano estratégico institucional?", "matriz": "COMUM", "classificacao": "RECOMENDADA", "subcriterios": ["Disponibilidade"] }
+    ],
+    "SIC (SERVIÇO DE INFORMAÇÃO AO CIDADÃO)": [
+      { "topico": "12.1", "criterio": "Existe o SIC no site e indica a unidade/setor responsável?", "matriz": "COMUM", "classificacao": "OBRIGATÓRIA", "subcriterios": ["Disponibilidade"] },
+      { "topico": "12.2", "criterio": "Indica o endereço físico, o telefone e o e-mail da unidade responsável pelo SIC, além do horário de funcionamento?", "matriz": "COMUM", "classificacao": "OBRIGATÓRIA", "subcriterios": ["Disponibilidade"] },
+      { "topico": "12.3", "criterio": "Há possibilidade de envio de pedidos de informação de forma eletrônica (e-SIC)?", "matriz": "COMUM", "classificacao": "OBRIGATÓRIA", "subcriterios": ["Disponibilidade"] },
+      { "topico": "12.4", "criterio": "A solicitação por meio de eSic é simples, ou seja, sem a exigência de itens de identificação do requerente que dificultem ou impossibilitem o acesso à informação, tais como: envio de documentos, assinatura reconhecida, declaração de responsabilidade, maioridade?", "matriz": "COMUM", "classificacao": "OBRIGATÓRIA", "subcriterios": ["Disponibilidade"] },
+      { "topico": "12.5", "criterio": "Divulga nesta seção, instrumento normativo local que regulamente a Lei nº 12.527/2011 – LAI?", "matriz": "COMUM", "classificacao": "OBRIGATÓRIA", "subcriterios": ["Disponibilidade"] },
+      { "topico": "12.6", "criterio": "Divulga, na seção relativa ao e-SIC, os prazos de resposta ao cidadão, incluindo o recursal, e as autoridades competentes para o exame dos pedidos, além do procedimento referente à realização do pedido e de eventual recurso?", "matriz": "COMUM", "classificacao": "RECOMENDADA", "subcriterios": ["Disponibilidade"] },
+      { "topico": "12.7", "criterio": "Divulga relatório anual estatístico contendo a quantidade de pedidos de acesso recebidos, atendidos, indeferidos, bem como informações genéricas sobre os solicitantes?", "matriz": "COMUM", "classificacao": "OBRIGATÓRIA", "subcriterios": ["Disponibilidade", "Atualidade", "Série Histórica", "Gravação de Relatório", "Filtro de Pesquisa"] },
+      { "topico": "12.8", "criterio": "Divulga lista de documentos classificados em cada grau de sigilo, contendo pelo menos o assunto sobre o qual versa a informação, a categoria na qual ela se encontra, o dispositivo legal que fundamenta a classificação e o respectivo prazo?", "matriz": "COMUM", "classificacao": "OBRIGATÓRIA", "subcriterios": ["Disponibilidade", "Atualidade", "Série Histórica", "Gravação de Relatório", "Filtro de Pesquisa"] },
+      { "topico": "12.9", "criterio": "Divulga lista das informações que tenham sido desclassificadas nos últimos 12 (doze) meses?", "matriz": "COMUM", "classificacao": "OBRIGATÓRIA", "subcriterios": ["Disponibilidade", "Atualidade", "Série Histórica", "Gravação de Relatório", "Filtro de Pesquisa"] }
+    ],
+    "ACESSIBILIDADE": [
+      { "topico": "13.1", "criterio": "O site oficial e o portal de transparência contêm símbolo de acessibilidade em destaque?", "matriz": "COMUM", "classificacao": "OBRIGATÓRIA", "subcriterios": ["Disponibilidade"] },
+      { "topico": "13.2", "criterio": "O site e o portal de transparência contêm exibição do “caminho” de páginas percorridas pelo usuário?", "matriz": "COMUM", "classificacao": "OBRIGATÓRIA", "subcriterios": ["Disponibilidade"] },
+      { "topico": "13.3", "criterio": "O site e o portal de transparência contêm opção de alto contraste?", "matriz": "COMUM", "classificacao": "OBRIGATÓRIA", "subcriterios": ["Disponibilidade"] },
+      { "topico": "13.4", "criterio": "O site e o portal de transparência contêm ferramenta de redimensionamento de texto?", "matriz": "COMUM", "classificacao": "OBRIGATÓRIA", "subcriterios": ["Disponibilidade"] },
+      { "topico": "13.5", "criterio": "Contém mapa do site institucional?", "matriz": "COMUM", "classificacao": "RECOMENDADA", "subcriterios": ["Disponibilidade"] }
+    ],
+    "OUVIDORIA": [
+      { "topico": "14.1", "criterio": "Há informações sobre o atendimento presencial pela Ouvidoria (Indicação de endereço físico e telefone, além do horário de funcionamento)?", "matriz": "COMUM", "classificacao": "OBRIGATÓRIA", "subcriterios": ["Disponibilidade"] },
+      { "topico": "14.2", "criterio": "Há canal eletrônico de acesso/interação com a ouvidoria?", "matriz": "COMUM", "classificacao": "OBRIGATÓRIA", "subcriterios": ["Disponibilidade"] },
+      { "topico": "14.3", "criterio": "Divulga Carta de Serviços ao Usuário?", "matriz": "COMUM", "classificacao": "OBRIGATÓRIA", "subcriterios": ["Disponibilidade"] }
+    ],
+    "LGPD E GOVERNO DIGITAL": [
+      { "topico": "15.1", "criterio": "Identifica o encarregado/responsável pelo tratamento de dados pessoais e disponibiliza Canal de Comunicação (telefone e/ou e-mail)?", "matriz": "COMUM", "classificacao": "OBRIGATÓRIA", "subcriterios": ["Disponibilidade"] },
+      { "topico": "15.2", "criterio": "Publica a sua Política de Privacidade e Proteção de Dados?", "matriz": "COMUM", "classificacao": "OBRIGATÓRIA", "subcriterios": ["Disponibilidade"] },
+      { "topico": "15.3", "criterio": "Possibilita a demanda e o acesso a serviços públicos por meio digital, sem necessidade de solicitação presencial?", "matriz": "COMUM", "classificacao": "OBRIGATÓRIA", "subcriterios": ["Disponibilidade"] },
+      { "topico": "15.4", "criterio": "Possibilita o acesso automatizado por sistemas externos em dados (estruturados e legíveis por máquina), e a página contém as regras de abertos utilização?", "matriz": "COMUM", "classificacao": "OBRIGATÓRIA", "subcriterios": ["Disponibilidade"] },
+      { "topico": "15.5", "criterio": "Regulamenta a Lei Federal nº 14.129/2021 (Governo Digital) e divulga a normativa em seu portal?", "matriz": "COMUM", "classificacao": "RECOMENDADA", "subcriterios": ["Disponibilidade"] },
+      { "topico": "15.6", "criterio": "Realiza e divulga resultados de pesquisas de satisfação?", "matriz": "COMUM", "classificacao": "OBRIGATÓRIA", "subcriterios": ["Disponibilidade"] }
+    ],
+    "ATIVIDADES FINALÍSTICAS – PL": [
+      { "topico": "20.1", "criterio": "Divulga a composição da Casa, com a biografia dos parlamentares?", "matriz": "PODER LEGISLATIVO", "classificacao": "OBRIGATÓRIA", "subcriterios": ["Disponibilidade"] },
+      { "topico": "20.2", "criterio": "Divulga as leis e atos infralegais (resoluções, decretos, etc.) produzidos?", "matriz": "PODER LEGISLATIVO", "classificacao": "OBRIGATÓRIA", "subcriterios": ["Disponibilidade", "Atualidade", "Série Histórica", "Filtro de Pesquisa"] },
+      { "topico": "20.3", "criterio": "Divulga projetos de leis e de atos infralegais, bem como as respectivas tramitações (contemplando ementa, documentos anexos, situação atual, autor, relator)?", "matriz": "PODER LEGISLATIVO", "classificacao": "OBRIGATÓRIA", "subcriterios": ["Disponibilidade", "Atualidade", "Série Histórica", "Filtro de Pesquisa"] },
+      { "topico": "20.4", "criterio": "Divulga a pauta das sessões do Plenário?", "matriz": "PODER LEGISLATIVO", "classificacao": "OBRIGATÓRIA", "subcriterios": ["Disponibilidade", "Atualidade", "Gravação de Relatório", "Filtro de Pesquisa"] },
+      { "topico": "20.5", "criterio": "Divulga a pauta das Comissões?", "matriz": "PODER LEGISLATIVO", "classificacao": "OBRIGATÓRIA", "subcriterios": ["Disponibilidade", "Atualidade", "Gravação de Relatório", "Filtro de Pesquisa"] },
+      { "topico": "20.6", "criterio": "Divulga as atas das sessões, incluindo a lista de presença dos parlamentares em cada sessão?", "matriz": "PODER LEGISLATIVO", "classificacao": "OBRIGATÓRIA", "subcriterios": ["Disponibilidade", "Atualidade", "Série Histórica", "Gravação de Relatório", "Filtro de Pesquisa"] },
+      { "topico": "20.7", "criterio": "Divulga lista sobre as votações nominais?", "matriz": "PODER LEGISLATIVO", "classificacao": "RECOMENDADA", "subcriterios": ["Disponibilidade", "Atualidade", "Série Histórica", "Gravação de Relatório", "Filtro de Pesquisa"] },
+      { "topico": "20.8", "criterio": "Divulga o ato que aprecia as Contas do Chefe do Poder Executivo (Decreto) e o teor do julgamento (Ata ou Resumo da Sessão que aprovou ou rejeitou as contas)?", "matriz": "PODER LEGISLATIVO", "classificacao": "OBRIGATÓRIA", "subcriterios": ["Disponibilidade", "Atualidade", "Série Histórica", "Filtro de Pesquisa"] },
+      { "topico": "20.9", "criterio": "Há transmissão de sessões, audiências públicas, consultas públicas ou outras formas de participação popular via meios de comunicação como rádio, TV, internet, entre outros?", "matriz": "PODER LEGISLATIVO", "classificacao": "RECOMENDADA", "subcriterios": ["Disponibilidade"] },
+      { "topico": "20.10", "criterio": "Divulga a regulamentação e os valores relativos às cotas para exercício da atividade parlamentar/verba indenizatória?", "matriz": "PODER LEGISLATIVO", "classificacao": "RECOMENDADA", "subcriterios": ["Disponibilidade", "Atualidade", "Série Histórica", "Gravação de Relatório", "Filtro de Pesquisa"] },
+      { "topico": "20.11", "criterio": "Divulga dados sobre as atividades legislativas dos parlamentares?", "matriz": "PODER LEGISLATIVO", "classificacao": "RECOMENDADA", "subcriterios": ["Disponibilidade", "Atualidade", "Série Histórica", "Filtro de Pesquisa"] }
+    ]
+  },
+  "Municipios_MA": [
+    "Açailândia", "Afonso Cunha", "Água Doce do Maranhão", "Alcântara", "Aldeias Altas", 
+    "Altamira do Maranhão", "Alto Alegre do Maranhão", "Alto Alegre do Pindaré", "Alto Parnaíba", 
+    "Amapá do Maranhão", "Amarante do Maranhão", "Anajatuba", "Anapurus", "Apicum-Açu", 
+    "Araguanã", "Araioses", "Arame", "Arari", "Axixá", "Bacabal", "Bacabeira", "Bacuri", 
+    "Bacurituba", "Balsas", "Barão de Grajaú", "Barra do Corda", "Barreirinhas", 
+    "Bela Vista do Maranhão", "Belágua", "Benedito Leite", "Bequimão", "Bernardo do Mearim", 
+    "Boa Vista do Gurupi", "Bom Jardim", "Bom Jesus das Selvas", "Bom Lugar", "Brejo", 
+    "Brejo de Areia", "Buriti", "Buriti Bravo", "Buriticupu", "Buritirana", "Cachoeira Grande", 
+    "Cajapió", "Cajari", "Campestre do Maranhão", "Cândido Mendes", "Cantanhede", 
+    "Capinzal do Norte", "Carolina", "Carutapera", "Caxias", "Cedral", "Central do Maranhão", 
+    "Centro do Guilherme", "Centro Novo do Maranhão", "Chapadinha", "Cidelândia", "Codó", 
+    "Coelho Neto", "Colinas", "Conceição do Lago-Açu", "Coroatá", "Cururupu", "Davinópolis", 
+    "Dom Pedro", "Duque Bacelar", "Esperantinópolis", "Estreito", "Feira Nova do Maranhão", 
+    "Fernando Falcão", "Formosa da Serra Negra", "Fortaleza dos Nogueiras", "Fortuna", 
+    "Godofredo Viana", "Gonçalves Dias", "Governador Archer", "Governador Edison Lobão", 
+    "Governador Eugênio Barros", "Governador Luiz Rocha", "Governador Newton Bello", 
+    "Governador Nunes Freire", "Graça Aranha", "Grajaú", "Guimarães", "Humberto de Campos", 
+    "Icatu", "Igarapé do Meio", "Igarapé Grande", "Imperatriz", "Itaipava do Grajaú", 
+    "Itapecuru Mirim", "Itinga do Maranhão", "Jatobá", "Jenipapo dos Vieiras", "João Lisboa", 
+    "Joselândia", "Junco do Maranhão", "Lago da Pedra", "Lago do Junco", "Lago dos Rodrigues", 
+    "Lago Verde", "Lagoa do Mato", "Lagoa Grande do Maranhão", "Lajeado Novo", "Lima Campos", 
+    "Loreto", "Luís Domingues", "Magalhães de Almeida", "Maracaçumé", "Marajá do Sena", 
+    "Maranhãozinho", "Mata Roma", "Matinha", "Matões", "Matões do Norte", "Milagres do Maranhão", 
+    "Mirador", "Miranda do Norte", "Mirinzal", "Monção", "Montes Altos", "Morros", "Nina Rodrigues", 
+    "Nova Colinas", "Nova Iorque", "Nova Olinda do Maranhão", "Olho d'Água das Cunhãs", 
+    "Olinda Nova do Maranhão", "Paço do Lumiar", "Palmeirândia", "Paraibano", "Parnarama", 
+    "Passagem Franca", "Pastos Bons", "Paulino Neves", "Paulo Ramos", "Pedreiras", 
+    "Pedro do Rosário", "Penalva", "Peri Mirim", "Peritoró", "Pindaré-Mirim", "Pinheiro", 
+    "Pio XII", "Pirapemas", "Poção de Pedras", "Porto Franco", "Porto Rico do Maranhão", 
+    "Presidente Dutra", "Presidente Juscelino", "Presidente Médici", "Presidente Sarney", 
+    "Presidente Vargas", "Primeira Cruz", "Raposa", "Riachão", "Ribamar Fiquene", "Rosário", 
+    "Sambaíba", "Santa Filomena do Maranhão", "Santa Helena", "Santa Inês", "Santa Luzia", 
+    "Santa Luzia do Paruá", "Santa Quitéria do Maranhão", "Santa Rita", "Santana do Maranhão", 
+    "Santo Amaro do Maranhão", "Santo Antônio dos Lopes", "São Benedito do Rio Preto", 
+    "São Bento", "São Bernardo", "São Domingos do Azeitão", "São Domingos do Maranhão", 
+    "São Félix de Balsas", "São Francisco do Brejão", "São Francisco do Maranhão", 
+    "São João Batista", "São João do Carú", "São João do Paraíso", "São João do Soter", 
+    "São João dos Patos", "São José de Ribamar", "São José dos Basílios", "São Luís", 
+    "São Luís Gonzaga do Maranhão", "São Mateus do Maranhão", "São Pedro da Água Branca", 
+    "São Pedro dos Crentes", "São Raimundo das Mangabeiras", "São Raimundo do Doca Bezerra", 
+    "São Roberto", "São Vicente Ferrer", "Satubinha", "Senador Alexandre Costa", 
+    "Senador La Rocque", "Serrano do Maranhão", "Sítio Novo", "Sucupira do Norte", 
+    "Sucupira do Riachão", "Tasso Fragoso", "Timbiras", "Timon", "Trizidela do Vale", 
+    "Tufilândia", "Tuntum", "Turiaçu", "Turilândia", "Tutóia", "Urbano Santos", 
+    "Vargem Grande", "Viana", "Vila Nova dos Martírios", "Vitória do Mearim", "Vitorino Freire", "Zé Doca"
+  ]
+}

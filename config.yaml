@@ -1,0 +1,16 @@
+cookie:
+  expiry_days: 30
+  key: "some_secret_key_that_is_very_long" # Mude esta chave!
+  name: "your_app_cookie"
+
+credentials:
+  usernames:
+    gabriel: # Seu nome de usuário
+      email: "gabriel@assesi.com"
+      name: "Gabriel"
+      password: "admin" # Cuidado: a senha aqui deve ser um hash, não texto puro!
+    # adicione outros usuários aqui
+    # outro_usuario:
+    #   email: "outro@example.com"
+    #   name: "Outro Nome"
+    #   password: "def"
