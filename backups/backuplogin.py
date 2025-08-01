@@ -7,9 +7,6 @@ from docx.shared import Pt, RGBColor, Inches
 from docx.enum.text import WD_ALIGN_PARAGRAPH
 from docx.enum.section import WD_ORIENT
 
-# Removidos: from docx.oxml.ns import qn, from docx.oxml import OxmlElement
-# Pois não serão mais usados para criar hyperlinks de baixo nível.
-
 from docx2pdf import convert
 import streamlit_authenticator as stauth
 import yaml
@@ -106,19 +103,16 @@ def on_disponibilidade_change(secao, criterio, subcriterios):
     novo_status_disponibilidade = st.session_state[chave_disponibilidade]
     st.session_state.respostas[chave_disponibilidade] = novo_status_disponibilidade
 
-    if novo_status_disponibilidade == "Não Atende":
-        for sub in subcriterios:
-            if sub != "Disponibilidade":
-                chave_subcriterio = f"{secao}_{criterio}_{sub}"
+    for sub in subcriterios:
+        if sub != "Disponibilidade":
+            chave_subcriterio = f"{secao}_{criterio}_{sub}"
+            if novo_status_disponibilidade == "Não Atende":
                 st.session_state.respostas[chave_subcriterio] = "Não Atende"
                 st.session_state.respostas[f"{chave_subcriterio}_obs"] = ""
-    else:
-        for sub in subcriterios:
-            if sub != "Disponibilidade":
-                chave_subcriterio = f"{secao}_{criterio}_{sub}"
+            else:
                 st.session_state.respostas[chave_subcriterio] = "Atende"
                 st.session_state.respostas[f"{chave_subcriterio}_obs"] = ""
-    st.rerun()
+    # st.rerun() # Removido, pois já foi explicado que não é necessário aqui.
 
 # --- FUNÇÃO DE GERAÇÃO DE RELATÓRIO ---
 def gerar_relatorio_novo_modelo(respostas, municipio, segmento, matriz_perguntas, tipo_relatorio, nome_usuario, usuario_config):
@@ -133,7 +127,7 @@ def gerar_relatorio_novo_modelo(respostas, municipio, segmento, matriz_perguntas
         doc = docx.Document(template_path)
     except Exception as e:
         st.error(f"Erro ao carregar o modelo de relatório '{template_path}': {e}")
-        return None, None
+        return None, None 
     
     # --- PÁGINA DE ROSTO ---
     for paragraph in doc.paragraphs:
@@ -164,16 +158,15 @@ def gerar_relatorio_novo_modelo(respostas, municipio, segmento, matriz_perguntas
         doc.add_paragraph()
         
         texto_intro = f"Com base na Lei 12.527/2011 (Lei de Acesso à Informação), o nosso controle de qualidade fez uma avaliação geral da {segmento} de {municipio}, na qual, apresentou as seguintes informações:"
-        doc.add_paragraph(texto_intro) # Não adiciona parágrafo extra aqui
-        doc.add_paragraph() # Adiciona um parágrafo de espaço antes das infos de avaliação
+        doc.add_paragraph(texto_intro)
+        doc.add_paragraph()
 
-        # Linhas de informação da avaliação com espaçamento
         p_exercicio = doc.add_paragraph(f"Exercício: {datetime.now().year}")
-        doc.add_paragraph() # Espaço
+        doc.add_paragraph()
         p_avaliador = doc.add_paragraph(f"Avaliação feita por: {nome_usuario}")
-        doc.add_paragraph() # Espaço
+        doc.add_paragraph()
         p_data_geracao = doc.add_paragraph(f"Data de Geração: {datetime.now().strftime('%d/%m/%Y %H:%M:%S')}")
-        doc.add_paragraph() # Espaço após a última linha
+        doc.add_paragraph()
 
     doc.add_page_break()
 
@@ -225,11 +218,29 @@ def gerar_relatorio_novo_modelo(respostas, municipio, segmento, matriz_perguntas
                 observacoes_finais = []
                 links_finais = []
 
+                # --- Lógica de Impressão do Relatório (Apenas "Não Atende") ---
+                chave_disponibilidade_item = f"{secao_nome}_{item['criterio']}_Disponibilidade"
+                disponibilidade_nao_atende_status = respostas.get(chave_disponibilidade_item, "Atende") 
+
+                if disponibilidade_nao_atende_status == "Não Atende":
+                    p_criterio = doc.add_paragraph()
+                    p_criterio.add_run(f"• Disponibilidade: ").italic = True
+                    run_status = p_criterio.add_run("Não Atende")
+                    run_status.bold = True
+                    run_status.font.color.rgb = RGBColor(0xFF, 0, 0)
+                    doc.add_paragraph()
+                    
+                    obs_disp = respostas.get(f"{chave_disponibilidade_item}_obs", "")
+                    if obs_disp: observacoes_finais.append(("Disponibilidade", obs_disp))
+                
                 for subcriterio in item["subcriterios"]:
+                    if subcriterio == "Disponibilidade":
+                        continue
+
                     chave_resposta = f"{secao_nome}_{item['criterio']}_{subcriterio}"
                     resposta_sub = respostas.get(chave_resposta, "Atende")
 
-                    if resposta_sub == "Não Atende":
+                    if resposta_sub == "Não Atende" and (disponibilidade_nao_atende_status == "Atende" or "Disponibilidade" not in item["subcriterios"]):
                         p_criterio = doc.add_paragraph()
                         p_criterio.add_run(f"• {subcriterio}: ").italic = True
                         run_status = p_criterio.add_run("Não Atende")
@@ -241,8 +252,8 @@ def gerar_relatorio_novo_modelo(respostas, municipio, segmento, matriz_perguntas
                         if obs: observacoes_finais.append((subcriterio, obs))
 
                 chave_links_pergunta_geral = f"{secao_nome}_{item['criterio']}_links"
-                links_gerais = respostas.get(chave_links_pergunta_geral, [])
-                links_finais.extend(links_gerais)
+                links_genericos_item = respostas.get(chave_links_pergunta_geral, []) # Renomeei para evitar conflito com links_finais
+                links_finais.extend(links_genericos_item) # Usar links_genericos_item aqui
 
                 if links_finais or observacoes_finais:
                     p_obs_titulo = doc.add_paragraph()
@@ -264,22 +275,33 @@ def gerar_relatorio_novo_modelo(respostas, municipio, segmento, matriz_perguntas
     # --- SALVAMENTO E CONVERSÃO ---
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
     nome_base = f"Relatorio_Final_{segmento.replace(' ', '')}_{municipio.replace(' ', '')}_{timestamp}"
-    path_docx = os.path.join("relatorios", f"{nome_base}.docx")
-    path_pdf = os.path.join("relatorios", f"{nome_base}.pdf")
-    
+    path_docx = os.path.join("relatorios", f"{nome_base}.docx"); path_pdf = os.path.join("relatorios", f"{nome_base}.pdf")
     doc.save(path_docx)
     try:
-        convert(path_docx, path_pdf)
-        return path_docx, path_pdf
+        convert(path_docx, path_pdf); os.remove(path_docx)
+        return path_docx, path_pdf # Retorna tupla (path_docx, path_pdf) em caso de sucesso
     except Exception as e:
-        st.error(f"Falha ao converter DOCX para PDF: {e}. O arquivo DOCX foi salvo e está disponível para download.")
-        return path_docx, None
+        st.sidebar.error(f"Falha ao converter para PDF: {e}. O arquivo DOCX foi salvo e está disponível para download."); st.session_state.fallback_docx_path = path_docx
+        return path_docx, None # Retorna tupla (path_docx, None) em caso de falha na conversão
 
 
 # --- INTERFACE GRÁFICA ---
 st.set_page_config(layout="wide", page_title="Avaliador de Transparência")
 st.title("📄 Sistema de Avaliação de Transparência Municipal")
 matriz_completa = carregar_criterios_do_arquivo()
+
+# Inicializa o estado de qual expander está aberto, se não existir
+if 'open_expander_key' not in st.session_state:
+    st.session_state.open_expander_key = None
+
+def handle_section_button_click(clicked_section_key):
+    # Este callback é acionado quando um dos botões de seção é clicado.
+    if st.session_state.open_expander_key == clicked_section_key:
+        st.session_state.open_expander_key = None # Se clicou no mesmo, fecha.
+    else:
+        st.session_state.open_expander_key = clicked_section_key # Abre o novo.
+    st.rerun() # Essencial para que a interface se redesenhe
+
 
 if matriz_completa:
     try:
@@ -326,6 +348,7 @@ if matriz_completa:
                 
                 st.session_state.path_pdf = None
                 st.session_state.fallback_docx_path = None
+                st.session_state.open_expander_key = None # Reseta o expander aberto ao iniciar/continuar
 
                 st.session_state.avaliacao_iniciada = True
                 st.session_state.caminho_arquivo = caminho_arquivo
@@ -359,23 +382,36 @@ if matriz_completa:
 
             for secao, perguntas in matriz_perguntas_segmento.items():
                 if secao == "Municipios_MA": continue
-                with st.expander(f"**{secao}**", expanded=False):
-                    for item in perguntas:
-                        st.markdown(f"#### {item['topico']} - {item['criterio']}"); st.markdown("---")
-                        
-                        col_link_ui, _ = st.columns([1, 1])
-                        with col_link_ui:
-                            st.subheader("Links de Evidência")
-                            chave_links = f"{secao}_{item['criterio']}_links"
-                            if chave_links not in st.session_state.respostas:
-                                st.session_state.respostas[chave_links] = []
+                
+                section_button_key = f"btn_section_{secao}"
+                score_secao_atendimento = calcular_pontuacao_secao(st.session_state.respostas, perguntas, secao)
+                
+                # Botão para o tópico com porcentagem e on_click para gerenciar o acordeão
+                if st.button(f"**{secao}** - {score_secao_atendimento:.2f}%", key=section_button_key, use_container_width=True, on_click=handle_section_button_click, args=(section_button_key,)):
+                    pass # O clique é gerenciado pelo on_click
+                
+                # Exibe o conteúdo do tópico APENAS SE A CHAVE DO BOTÃO ESTIVER NO open_expander_key
+                if st.session_state.open_expander_key == section_button_key:
+                    # Usamos st.container para agrupar o conteúdo que seria do expander
+                    with st.container(border=True):
+                        st.markdown("---") # Linha separadora visualmente
+
+                        for item in perguntas:
+                            st.markdown(f"#### {item['topico']} - {item['criterio']}"); st.markdown("---")
                             
-                            for i, link in enumerate(st.session_state.respostas[chave_links]):
-                                link_cols = st.columns([10, 1])
-                                link_cols[0].info(link)
-                                if link_cols[1].button("X", key=f"rem_{chave_links}_{i}"): 
-                                    st.session_state.respostas[chave_links].pop(i)
-                                    st.rerun()
+                            col_link_ui, _ = st.columns([1, 1])
+                            with col_link_ui:
+                                st.subheader("Links de Evidência")
+                                chave_links = f"{secao}_{item['criterio']}_links"
+                                if chave_links not in st.session_state.respostas:
+                                    st.session_state.respostas[chave_links] = []
+                                
+                                for i, link in enumerate(st.session_state.respostas[chave_links]):
+                                    link_cols = st.columns([10, 1])
+                                    link_cols[0].info(link)
+                                    if link_cols[1].button("X", key=f"rem_{chave_links}_{i}"): 
+                                        st.session_state.respostas[chave_links].pop(i)
+                                        st.rerun()
                             
                             link_cols = st.columns([10, 1])
                             novo_link_key = f"add_{chave_links}"
@@ -386,58 +422,60 @@ if matriz_completa:
                                     st.rerun()
 
 
-                        st.markdown("---"); st.subheader("Critérios de Avaliação")
-                        subcriterios = item["subcriterios"]
-                        
-                        disponibilidade_falhou_na_sessao = False
-                        if "Disponibilidade" in subcriterios:
+                            # AQUI: A seção "Critérios de Avaliação" deve ser renderizada para CADA ITEM.
+                            st.markdown("---"); st.subheader("Critérios de Avaliação")
+                            subcriterios = item["subcriterios"]
+                            
+                            # --- Renderização de Disponibilidade ---
                             chave_disponibilidade_resposta = f"{secao}_{item['criterio']}_Disponibilidade"
-                            if st.session_state.respostas.get(chave_disponibilidade_resposta) == "Não Atende":
-                                disponibilidade_falhou_na_sessao = True 
+                            current_disponibilidade_status = st.session_state.respostas.get(chave_disponibilidade_resposta, "Atende")
 
-                            cols = st.columns([1, 2])
-                            with cols[0]:
-                                resposta_atual_disp = st.session_state.respostas.get(chave_disponibilidade_resposta, "Atende")
+                            cols_disp = st.columns([1, 2])
+                            with cols_disp[0]:
                                 st.radio("Disponibilidade", ("Atende", "Não Atende"), 
-                                         index=1 if resposta_atual_disp == "Não Atende" else 0, 
+                                         index=1 if current_disponibilidade_status == "Não Atende" else 0, 
                                          key=chave_disponibilidade_resposta, 
                                          horizontal=True, 
                                          on_change=on_disponibilidade_change, 
                                          kwargs=dict(secao=secao, criterio=item['criterio'], subcriterios=subcriterios))
                             
-                            if st.session_state.respostas.get(chave_disponibilidade_resposta) == "Não Atende":
-                                with cols[1]:
+                            if current_disponibilidade_status == "Não Atende":
+                                with cols_disp[1]:
                                     chave_obs_disp = f"{chave_disponibilidade_resposta}_obs"
                                     obs_disp = st.text_area("Observação:", value=st.session_state.respostas.get(chave_obs_disp, ""), key=chave_obs_disp)
                                     st.session_state.respostas[chave_obs_disp] = obs_disp
                                     
-                        for subcriterio in subcriterios:
-                            if subcriterio == "Disponibilidade":
-                                continue
-                            
-                            cols = st.columns([1, 2])
-                            chave_resposta_sub = f"{secao}_{item['criterio']}_{subcriterio}"
-                            
-                            with cols[0]:
-                                resposta_atual_sub = st.session_state.respostas.get(chave_resposta_sub, "Atende")
+                            # --- Renderização de Outros Subcritérios ---
+                            # Estes aparecem sempre na UI, independentemente do status de Disponibilidade.
+                            for subcriterio in subcriterios:
+                                if subcriterio == "Disponibilidade":
+                                    continue # Já tratamos acima
                                 
-                                disabled = disponibilidade_falhou_na_sessao
-                                display_index = 1 if resposta_atual_sub == "Não Atende" else 0
-
-                                st.radio(subcriterio, ("Atende", "Não Atende"), 
-                                         index=display_index, 
-                                         key=chave_resposta_sub, 
-                                         horizontal=True, 
-                                         disabled=disabled)
-                                st.session_state.respostas[chave_resposta_sub] = ["Atende", "Não Atende"][display_index]
+                                cols_sub = st.columns([1, 2])
+                                chave_resposta_sub = f"{secao}_{item['criterio']}_{subcriterio}"
                                 
-                            if st.session_state.respostas.get(chave_resposta_sub) == "Não Atende":
-                                with cols[1]:
-                                    chave_obs_sub = f"{chave_resposta_sub}_obs"
-                                    obs_sub = st.text_area("Observação:", value=st.session_state.respostas.get(chave_obs_sub, ""), key=chave_obs_sub, disabled=disabled)
-                                    st.session_state.respostas[chave_obs_sub] = obs_sub
+                                with cols_sub[0]:
+                                    resposta_atual_sub = st.session_state.respostas.get(chave_resposta_sub, "Atende")
                                     
-                        st.markdown("---")
+                                    # AQUI: A desabilitação é controlada pelo status de Disponibilidade
+                                    disabled_by_disponibilidade = (current_disponibilidade_status == "Não Atende")
+                                    
+                                    display_index = 1 if resposta_atual_sub == "Não Atende" else 0
+
+                                    st.radio(subcriterio, ("Atende", "Não Atende"), 
+                                             index=display_index, 
+                                             key=chave_resposta_sub, 
+                                             horizontal=True, 
+                                             disabled=disabled_by_disponibilidade) # Aplica o disabled aqui
+                                        
+                                # EXIBIR CAMPO DE OBSERVAÇÃO PARA OUTROS CRITÉRIOS SE "NÃO ATENDE"
+                                if st.session_state.respostas.get(chave_resposta_sub) == "Não Atende":
+                                    with cols_sub[1]:
+                                        chave_obs_sub = f"{chave_resposta_sub}_obs"
+                                        obs_sub = st.text_area("Observação:", value=st.session_state.respostas.get(chave_obs_sub, ""), key=chave_obs_sub, disabled=disabled_by_disponibilidade) # Aplica o disabled aqui também
+                                        st.session_state.respostas[chave_obs_sub] = obs_sub
+                                        
+                            st.markdown("---") # Mantém esse separador após o item completo
             
             st.sidebar.header("Ações")
             if st.sidebar.button("💾 Salvar Progresso"):
