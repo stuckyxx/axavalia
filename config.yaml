@@ -5,10 +5,10 @@ cookie:
 
 credentials:
   usernames:
-    gabriel: # Seu nome de usuário
+    assesi: # Seu nome de usuário
       email: "gabriel@assesi.com"
-      name: "Gabriel"
-      password: "admin" # Cuidado: a senha aqui deve ser um hash, não texto puro!
+      name: "Assesi"
+      password: "assesi" # Cuidado: a senha aqui deve ser um hash, não texto puro!
     # adicione outros usuários aqui
     # outro_usuario:
     #   email: "outro@example.com"
